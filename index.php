@@ -23,12 +23,12 @@
 					$description8=["ASUS","Harddisk : 200 TB ","RAM : 1024GB","Screen Resolution : 8k","Cost : $10000"];
 					$description9=["KTM Duke","CC : 250 ","Mileage : 35kmpl","Engine : dual Exhaust","Cost : $2000"];
 					$items=[$description1,$description2,$description3,$description4,$description5,$description6,$description7,$description8,$description9];
+					echo $items[2][0];
 					for($i = 1; $i <= 9; $i++)
 					{
 						?>
 							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px; width: 270px; height 270px;">
 							    <img src="<?php echo $i; ?>.jpg" class="img-responsive">
-								<p></p>
 							</div>
 						<?php
 					}
