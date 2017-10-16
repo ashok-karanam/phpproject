@@ -17,7 +17,7 @@
 					{
 						?>
 							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
-							    <img src="<?php echo $i; ?>.jpg" />
+							    <img src="<?php echo $i; ?>.jpg" class="img-responsive">
 							</div>
 						<?php
 					}
