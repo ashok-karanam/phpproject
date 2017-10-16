@@ -15,9 +15,9 @@
 				<?php
 					for(i = 1; i <= 9; i++)
 					{
-						?>
-							echo "he";
-						<?php
+						echo '<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+						    <img src="1.jpg" />
+						</div>';
 					}
 				?>
                     
