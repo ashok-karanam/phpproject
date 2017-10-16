@@ -36,6 +36,7 @@
 										<?php
 									 }
 								?>
+								<a href="shopping_cart.php?prod_id=<?php echo $j; ?>" class="btn btn-primary">Add to Cart</a>
 							</div>
 						<?php
 					}
