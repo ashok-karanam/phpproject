@@ -31,7 +31,9 @@
 								<?php
 									for(j = 0; j <= 4; j++)
 									 {
-										<p>$items[$i][$j]<p>		 
+										?>
+											<p>$items[$i][$j]<p>
+										<?php
 									 }
 								?>
 							</div>
