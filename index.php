@@ -27,7 +27,9 @@
 					{
 						?>
 							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px; width: 270px; height 270px;">
-							    	<img src="<?php echo $i; ?>.jpg" class="img-responsive">
+							    	<a href="shopping_cart.php?prod_id=<?php echo $i; ?>">
+									<img src="<?php echo $i; ?>.jpg" class="img-responsive">
+								</a>
 								<?php
 									for($j = 0; $j <= 4; $j++)
 									 {
@@ -36,7 +38,7 @@
 										<?php
 									 }
 								?>
-								<a href="shopping_cart.php?prod_id=<?php echo $i; ?>" class="btn btn-primary">Add to Cart</a>
+								<a href="" class="btn btn-primary">Add to Cart</a>
 							</div>
 						<?php
 					}
