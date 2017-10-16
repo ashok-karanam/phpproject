@@ -29,10 +29,10 @@
 							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px; width: 270px; height 270px;">
 							    	<img src="<?php echo $i; ?>.jpg" class="img-responsive">
 								<?php
-									for(j = 0; j <= 4; j++)
+									for($j = 0; $j <= 4; $j++)
 									 {
 										?>
-											<p>hello<p>
+											<p><?php echo $items[$i][$j]; ?><p>
 										<?php
 									 }
 								?>
