@@ -26,7 +26,7 @@
 					for($i = 0; $i < 9; $i++)
 					{
 						?>
-							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px; width: 270px; height 270px;">
+							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px;">
 							    	<a href="shopping_cart.php?prod_id=<?php echo $i; ?>">
 									<img src="<?php echo $i; ?>.jpg" class="img-responsive">
 								</a>
