@@ -32,7 +32,7 @@
 									for(j = 0; j <= 4; j++)
 									 {
 										?>
-											<p>$items[$i][$j]<p>
+											<p><?php echo $items[$i][$j]; ?><p>
 										<?php
 									 }
 								?>
