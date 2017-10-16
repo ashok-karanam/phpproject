@@ -13,6 +13,7 @@
                            <img src="<?php echo $prod_id; ?>.jpg" class="img-responsive">
                       </div>
 	              <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+		        <?php
 	              $description0=["KTM Duke","CC : 250 ","Mileage : 35kmpl","Engine : dual Exhaust","Cost : $2000"];
 		      $description1=["HP Pavilion","Harddisk : 20 TB ","RAM : 124GB","Screen Resolution : 8k","Cost : $1500"];
 		      $description2=["Mac Book Pro 2.0","Harddisk : 15 TB ","RAM : 116GB","Screen Resolution : 4k","Cost : $1000"];
@@ -29,6 +30,7 @@
 			   <p><?php echo $items[$prod_id][$i]; ?><p>
 			   <?php		 
 			}
+		       ?>
 		      </div>
                   </div>
          </div>
