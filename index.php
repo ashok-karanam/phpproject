@@ -16,7 +16,7 @@
 					for($i = 1; $i <= 9; $i++)
 					{
 						?>
-							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px;">
 							    <img src="<?php echo $i; ?>.jpg" class="img-responsive">
 							</div>
 						<?php
