@@ -22,7 +22,7 @@
 					$description7=["ACER","Harddisk : 200 TB ","RAM : 1024GB","Screen Resolution : 8k","Cost : $10000"];
 					$description8=["ASUS","Harddisk : 200 TB ","RAM : 1024GB","Screen Resolution : 8k","Cost : $10000"];
 					$description9=["KTM Duke","CC : 250 ","Mileage : 35kmpl","Engine : dual Exhaust","Cost : $2000"];
-					//$items=[$description1,$description2,$description3,$description4,$description5,$description6,$description7,$description8,$description9]
+					$items=[$description1,$description2,$description3,$description4,$description5,$description6,$description7,$description8,$description9];
 					for($i = 1; $i <= 9; $i++)
 					{
 						?>
