@@ -13,12 +13,7 @@
 				<div class="col-md-2 col-lg-2 col-xs-12 col-sm-12"></div>
 				<div class="col-md-10 col-lg-10 col-xs-12 col-sm-12">
 				<?php
-					for(i = 1; i <= 9; i++)
-					{
-						echo '<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
-						    <img src="1.jpg" />
-						</div>';
-					}
+					echo "hello";
 				?>
                     
                     <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12"></div>
