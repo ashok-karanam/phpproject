@@ -1,10 +1,12 @@
 <?php
-	include("db_config.php");
     	$prod_id=(isset($_REQUEST['prod_id']) ? $_REQUEST['prod_id'] : '');
 
-	$stmt = $conn->prepare("select * from customers"); 
-	//$stmt->execute();
-	//$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+	require_once('db_config.php'); 
+	$sql = "SELECT * FROM movies";
+	foreach($conn->query($sql) as $row)
+	{
+    		echo "<li>{$row['NAME']}</li>";
+	}
 ?>
 <html>
     <head>
