@@ -2,7 +2,7 @@
 	include("db_config.php");
     	$prod_id=(isset($_REQUEST['prod_id']) ? $_REQUEST['prod_id'] : '');
 
-	//$stmt = $conn->prepare("select * from customers"); 
+	$stmt = $conn->prepare("select * from customers"); 
 	//$stmt->execute();
 	//$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 ?>
