@@ -2,11 +2,13 @@
 	include("db_config.php");
     	$prod_id=(isset($_REQUEST['prod_id']) ? $_REQUEST['prod_id'] : '');
 
-	$sql="select * from customers";
-	$query=mysqli_query($connection, $sql);
-	$row=mysqli_fetch_assoc($query);
-	
-	echo $row['NAME'];
+	$stmt = $conn->prepare("select * from customers"); 
+	$stmt->execute();
+	$result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+	foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) 
+	{ 
+		echo $v;
+	}   
 ?>
 <html>
     <head>
