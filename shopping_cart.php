@@ -2,7 +2,7 @@
     	$prod_id=(isset($_REQUEST['prod_id']) ? $_REQUEST['prod_id'] : '');
 
 	require_once('db_config.php'); 
-	$sql = "SELECT * FROM movies";
+	$sql = "SELECT * FROM customers";
 	foreach($conn->query($sql) as $row)
 	{
     		echo "<li>{$row['NAME']}</li>";
