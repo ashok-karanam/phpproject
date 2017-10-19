@@ -27,7 +27,7 @@
         				 </div>
          			         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
      	    				      <li>Name: <?php echo $row['pro_name']; ?></li>
-	    				      <li>Price: <?php echo $row['pro_id']; ?></li>
+	    				      <li>Product Id: <?php echo $row['pro_id']; ?></li>
 	     				      <li>Price: <?php echo $row['price']; ?></li>
        				         </div>
          			         <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
