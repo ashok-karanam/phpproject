@@ -1,4 +1,5 @@
 <?php
+	session_start();
     	$prod_id=(isset($_REQUEST['prod_id']) ? $_REQUEST['prod_id'] : '');
 	require_once('db_config.php'); 
 	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_catg.cat_id=tbl_prod.cat_id where pro_id=$prod_id";
@@ -30,6 +31,12 @@
 									<li>Resolution: <?php echo $row['screen_resolution']; ?></li>
 									<li>Price: <?php echo $row['price']; ?></li>
 								</ul>
+							      <div>
+								<form action="" method="post">
+								<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
+								<input type="submit" value="Buy Now" name="buy_now">
+								</form>      
+							      </div>
 						      </div>
 			  		<?php
 				}
@@ -38,3 +45,10 @@
          </div>
     </body>
 </html>
+<?php
+	if(isset($_POST['buy_now']))
+	{
+		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
+		$_SESSION['pro_id']=$pro_id;
+	}
+?>
