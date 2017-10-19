@@ -31,7 +31,10 @@
 	     				      <li>Price: <?php echo $row['price']; ?></li>
        				         </div>
          			         <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
-						 <button type="" value="Delete">Delete</button>
+						 <form action="" method="post">
+							<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
+							<input type="delete" value="Delete" name="delete_now">
+							</form>      
        				         </div>
 					</div>	
 				<?php
