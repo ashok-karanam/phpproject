@@ -15,16 +15,27 @@
     </head>
     
     <body>
-    <div>
-    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-    <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-     <img src="3.jpg" class="img-responsive">
-    </div>
-    <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
-    
-    </div>
-     <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
-    </div>
-    </div>
+	    <div class="container">
+		  <div class="row" style="padding: 50px;">
+			  <?php
+			  	foreach($conn->query($sql) as $row)
+				{
+				   ?>
+                        	        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+  				       	<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+        				     	<img src="<?php echo $row['img_name']; ?>" class="img-responsive">
+        				 </div>
+         			         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
+     	    				      <li>Name: <?php echo $row['pro_name']; ?></li>
+	    				      <li>Price: <?php echo $row['pro_id']; ?></li>
+	     				      <li>Price: <?php echo $row['price']; ?></li>
+       				         </div>
+         			         <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+       				         </div>
+				<?php
+				}
+				?>
+                  </div>
+         </div>
     </body>
 </html> 
