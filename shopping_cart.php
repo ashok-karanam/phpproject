@@ -33,7 +33,7 @@
          			         <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
 						 <form action="" method="post">
 							<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
-							<input type="delete" value="Delete" name="delete_now">
+							<button type="delete" value="Delete" name="delete_now">Delete</button>
 							</form>      
        				         </div>
 					</div>	
