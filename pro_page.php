@@ -3,6 +3,7 @@
     	$prod_id=(isset($_REQUEST['prod_id']) ? $_REQUEST['prod_id'] : '');
 	require_once('db_config.php'); 
 	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_catg.cat_id=tbl_prod.cat_id where pro_id=$prod_id";
+	echo $_SESSION['pro_id'];
 ?>
 
 <html>
