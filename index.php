@@ -21,7 +21,7 @@
 					{
 						?>
 							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px;padding:30px;">
-								<a href="shopping_cart.php?prod_id=<?php echo $i; ?>">
+								<a href="shopping_cart.php?prod_id=<?php echo $row['pro_id']; ?>">
 									<img src="<?php echo $row['img_name']; ?>" class="img-responsive">
 								</a>
 								<ul>
