@@ -1,10 +1,6 @@
 <?php
 	require_once('db_config.php'); 
 	$sql = "SELECT * FROM tbl_prod";
-	foreach($conn->query($sql) as $row)
-	{
-    		echo "<li>{$row['pro_name']}</li>";
-	}
 ?>
 <html>
     <head>
@@ -21,22 +17,20 @@
 				<div class="col-md-2 col-lg-2 col-xs-12 col-sm-12"></div>
 				<div class="col-md-10 col-lg-10 col-xs-12 col-sm-12">
 				<?php
-					$items=[$description0,$description1,$description2,$description3,$description4,$description5,$description6,$description7,$description8];
-					for($i = 0; $i < 9; $i++)
+					foreach($conn->query($sql) as $row)
 					{
 						?>
 							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px;padding:30px;">
-							    	<a href="shopping_cart.php?prod_id=<?php echo $i; ?>">
-									<img src="<?php echo $i; ?>.jpg" class="img-responsive">
+								<a href="shopping_cart.php?prod_id=<?php echo $i; ?>">
+									<img src="<?php echo $row['img_name']; ?>.jpg" class="img-responsive">
 								</a>
-								<?php
-									for($j = 0; $j <= 4; $j++)
-									 {
-										?>
-											<p><?php echo $items[$i][$j]; ?><p>
-										<?php
-									 }
-								?>
+								<ul>
+									<li>$row['pro_name']</li>
+									<li>$row['storage']</li>
+									<li>$row['memory']</li>
+									<li>$row['screen_resolution']</li>
+									<li>$row['price']</li>
+								</ul>
 								<a href="" class="btn btn-primary">Add to Cart</a>
 							</div>
 						<?php
