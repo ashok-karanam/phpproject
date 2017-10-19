@@ -50,7 +50,7 @@
 	if(isset($_POST['buy_now']))
 	{
 		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
-		//$_SESSION['pro_id']=$pro_id;
-		array_push($_SESSION['pro_id'],$pro_id);
+		$_SESSION['pro_id']=$pro_id;
+		//array_push($_SESSION['pro_id'],$pro_id);
 	}
 ?>
