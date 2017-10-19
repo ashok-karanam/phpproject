@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  $lname=$_SESSION['pro_id'];
+  $prod_id=$_SESSION['pro_id'];
   require_once('db_config.php'); 
 	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_catg.cat_id=tbl_prod.cat_id where pro_id=$prod_id";
 ?>
