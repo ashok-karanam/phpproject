@@ -22,14 +22,14 @@
 						?>
 							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12" style="margin-top:50px;padding:30px;">
 								<a href="shopping_cart.php?prod_id=<?php echo $i; ?>">
-									<img src="<?php echo $row['img_name']; ?>.jpg" class="img-responsive">
+									<img src="<?php echo $row['img_name']; ?>" class="img-responsive">
 								</a>
 								<ul>
-									<li>$row['pro_name']</li>
-									<li>$row['storage']</li>
-									<li>$row['memory']</li>
-									<li>$row['screen_resolution']</li>
-									<li>$row['price']</li>
+									<li><?php echo $row['pro_name']; ?></li>
+									<li><?php echo $row['storage']; ?></li>
+									<li><?php echo $row['memory']; ?></li>
+									<li><?php echo $row['screen_resolution']; ?></li>
+									<li><?php echo $row['price']; ?></li>
 								</ul>
 								<a href="" class="btn btn-primary">Add to Cart</a>
 							</div>
