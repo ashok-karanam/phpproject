@@ -1,6 +1,6 @@
 <?php
 	require_once('db_config.php'); 
-	$sql = "SELECT * FROM customers";
+	$sql = "SELECT * FROM tbl_prod";
 	foreach($conn->query($sql) as $row)
 	{
     		echo "<li>{$row['NAME']}</li>";
