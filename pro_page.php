@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-		  <div class="row">
+		  <div class="row" style="padding: 50px;">
 			<?php
 			  	foreach($conn->query($sql) as $row)
 				{
