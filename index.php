@@ -51,4 +51,5 @@
 		</div>
 	</div>
     </body>
+	//create table tbl_prod (pro_id int primary key,cat_id int,pro_name varchar(255),storage varchar(20),memory varchar(20),price varchar(10),screen_resolution varchar(30),foreign key(cat_id) references tbl_catg(cat_id));
 </html>
