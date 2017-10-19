@@ -44,3 +44,18 @@
          </div>
     </body>
 </html> 
+
+<?php
+	if(isset($_POST['delete_now']))
+	{
+		unset($_SESSION['pro_id']);
+		unset($prod_id);
+		?>
+			<script>
+				alert("Product Deleted");
+				window.location.href=window.location.href;
+			</script>
+		<?php
+		
+	}
+?>
