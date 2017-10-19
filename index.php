@@ -3,7 +3,7 @@
 	$sql = "SELECT * FROM tbl_prod";
 	foreach($conn->query($sql) as $row)
 	{
-    		echo "<li>{$row['NAME']}</li>";
+    		echo "<li>{$row['pro_name']}</li>";
 	}
 ?>
 <html>
