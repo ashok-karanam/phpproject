@@ -25,11 +25,11 @@
 									<img src="<?php echo $row['img_name']; ?>" class="img-responsive">
 								</a>
 								<ul>
-									<li><?php echo $row['pro_name']; ?></li>
-									<li><?php echo $row['storage']; ?></li>
-									<li><?php echo $row['memory']; ?></li>
-									<li><?php echo $row['screen_resolution']; ?></li>
-									<li><?php echo $row['price']; ?></li>
+									<li>Name: <?php echo $row['pro_name']; ?></li>
+									<li>Storage: <?php echo $row['storage']; ?></li>
+									<li>Memory: <?php echo $row['memory']; ?></li>
+									<li>Resolution: <?php echo $row['screen_resolution']; ?></li>
+									<li>Price: <?php echo $row['price']; ?></li>
 								</ul>
 								<a href="" class="btn btn-primary">Add to Cart</a>
 							</div>
