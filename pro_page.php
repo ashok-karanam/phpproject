@@ -19,14 +19,6 @@
                            <img src="<?php echo $prod_id; ?>.jpg" class="img-responsive">
                       </div>
 	              <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
-		        <?php	              
-		                for($i = 0; $i <= 4; $i++)
-				{
-				   ?>
-				   <p><?php echo $items[$prod_id][$i]; ?><p>
-				   <?php		 
-				}
-		       ?>
 		      </div>
                   </div>
          </div>
