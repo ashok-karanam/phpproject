@@ -33,7 +33,10 @@
 											<li>Resolution: <?php echo $row['screen_resolution']; ?></li>
 											<li>Price: <?php echo $row['price']; ?></li>
 										</ul>
-										<a href="" class="btn btn-primary">Add to Cart</a>
+										<form action="" method="post">
+											<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
+											<input type="submit" value="Add to Cart" name="buy_now" class="btn btn-primary">
+										</form>
 									</div>
 								<?php
 							}
