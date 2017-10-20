@@ -46,7 +46,10 @@
     </body>
 </html>
 <?php
-	$cart_arr=[];
+	if(empty($cart_arr))
+	{
+		$cart_arr=[];
+	}
 	if(isset($_POST['buy_now']))
 	{
 		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
