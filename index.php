@@ -14,7 +14,15 @@
         <div class="container">
 		<div class="row">
 			<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-				<div class="col-md-2 col-lg-2 col-xs-12 col-sm-12"></div>
+				<div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
+				
+					<form action="" method="get">
+					  <input type="checkbox" name="laptops" value="laptop">Laptops<br>
+					  <input type="checkbox" name="mobiles" value="mobile">Mobiles<br>
+					  <input type="submit" value="Search">
+					</form>
+	
+				</div>
 				<div class="col-md-10 col-lg-10 col-xs-12 col-sm-12">
 				<?php
 					foreach($conn->query($sql) as $row)
