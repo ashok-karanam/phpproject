@@ -16,7 +16,7 @@
 	    <div class="container">
 		  <div class="row" style="padding: 50px;">
 			<?php
-				foreach ($_SESSION['cart_arr'] as $value) 
+				foreach($_SESSION['cart_arr'] as $value) 
 				{
 					echo $value;
 				}  	
