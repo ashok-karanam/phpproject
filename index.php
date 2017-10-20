@@ -9,7 +9,7 @@
 	{
 		$append="where 1==1";
 	}
-	$sql = "SELECT * FROM tbl_prod $append";
+	$sql = "SELECT * FROM tbl_prod where 1==1";
 ?>
 
 <html>
