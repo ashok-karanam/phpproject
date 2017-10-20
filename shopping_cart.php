@@ -1,6 +1,11 @@
 <?php
 	session_start();
 	require_once('db_config.php'); 
+$pro_id=$_SESSION['cart_arr'];
+				foreach($pro_id as $value) 
+				{
+					echo $value;
+				} 
 ?>
 
 <html>
@@ -16,11 +21,7 @@
 	    <div class="container">
 		  <div class="row" style="padding: 50px;">
 			<?php
-			  	$pro_id=$_SESSION['cart_arr'];
-				foreach($pro_id as $value) 
-				{
-					echo $value;
-				} 	
+			  		
 			?>
                   </div>
          </div>
