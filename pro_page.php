@@ -46,10 +46,11 @@
     </body>
 </html>
 <?php
+	$cart_arr=[];
 	if(isset($_POST['buy_now']))
 	{
 		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
-		$cart_arr=[];
+		
 		array_push($cart_arr,$pro_id);
 		$_SESSION['$cart_arr']=$cart_arr;
 		
