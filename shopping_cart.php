@@ -7,9 +7,5 @@ if(empty($_SESSION['cart_arr']))
 else
 {
 	echo "t";
-}
-	foreach ( as $value) 
-	{
-		echo $value;
-	} 
+} 
 ?>
