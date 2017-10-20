@@ -3,11 +3,6 @@
     	$prod_id=(isset($_REQUEST['prod_id']) ? $_REQUEST['prod_id'] : '');
 	require_once('db_config.php'); 
 	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_catg.cat_id=tbl_prod.cat_id where pro_id=$prod_id";
-	$prod_id=$_SESSION['cart_arr'];
-	foreach ($prod_id as $value) 
-	{
-		echo $prod_id;
-	}
 ?>
 
 <html>
@@ -54,6 +49,13 @@
 	if(isset($_POST['buy_now']))
 	{
 		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
-		array_push($_SESSION['cart_arr'],$pro_id);
+		$cart_arr=[];
+		array_push($cart_arr,$pro_id);
+		$_SESSION['$cart_arr']=$cart_arr;
+		
+		foreach ($cart_arr as $value) 
+		{
+			echo $value;
+		}
 	}
 ?>
