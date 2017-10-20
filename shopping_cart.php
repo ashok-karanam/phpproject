@@ -16,7 +16,7 @@
 	    <div class="container">
 		  <div class="row" style="padding: 50px;">
 			<?php
-				foreach ($_SESSION['cart_arr']; as $value) 
+				foreach ($_SESSION['cart_arr'] as $value) 
 				{
 					$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_catg.cat_id=tbl_prod.cat_id where pro_id=$value";
 					foreach($conn->query($sql) as $row)
