@@ -1,8 +1,7 @@
 <?php
 	session_start();
-	$prod_id=$_SESSION['pro_id'];
+	$prod_id=$_SESSION['cart_arr'];
 	require_once('db_config.php'); 
-	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_catg.cat_id=tbl_prod.cat_id where pro_id=$prod_id";
 ?>
 
 <html>
@@ -17,29 +16,35 @@
     <body>
 	    <div class="container">
 		  <div class="row" style="padding: 50px;">
-			  <?php
-			  	foreach($conn->query($sql) as $row)
+			<?php
+				foreach ($prod_id as $value) 
 				{
-				   ?>
-                        	        <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
-  				       	<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
-        				     	<img src="<?php echo $row['img_name']; ?>" class="img-responsive">
-        				 </div>
-         			         <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
-     	    				      <li>Name: <?php echo $row['pro_name']; ?></li>
-	    				      <li>Product Id: <?php echo $row['pro_id']; ?></li>
-	     				      <li>Price: <?php echo $row['price']; ?></li>
-       				         </div>
-         			         <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
-						 <form action="" method="post">
-							<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
-							<button type="delete" value="Delete" name="delete_now">Delete</button>
-							</form>      
-       				         </div>
-					</div>	
-				<?php
-				}
-				?>
+					$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_catg.cat_id=tbl_prod.cat_id where pro_id=$value";
+					foreach($conn->query($sql) as $row)
+					{
+						?>
+							<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+								<div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+									<img src="<?php echo $row['img_name']; ?>" class="img-responsive">
+								</div>
+								<div class="col-md-5 col-lg-5 col-xs-12 col-sm-12">
+									<ul>
+										<li>Name: <?php echo $row['pro_name']; ?></li>
+										<li>Product Id: <?php echo $row['pro_id']; ?></li>
+										<li>Price: <?php echo $row['price']; ?></li>
+									</ul>
+								 </div>
+								<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+									<form action="" method="post">
+										<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
+										<button type="delete" value="Delete" name="delete_now">Delete</button>
+									</form>      
+								</div>
+							</div>	
+						<?php
+					}
+				}  	
+			?>
                   </div>
          </div>
     </body>
