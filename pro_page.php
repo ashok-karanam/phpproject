@@ -50,10 +50,7 @@
 	{
 		$cart_arr=[];
 	}
-	foreach ($cart_arr as $value) 
-		{
-			echo $value;
-		}
+	
 	if(isset($_POST['buy_now']))
 	{
 		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
@@ -63,4 +60,8 @@
 		
 		
 	}
+	foreach ($cart_arr as $value) 
+		{
+			echo $value;
+		}
 ?>
