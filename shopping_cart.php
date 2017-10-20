@@ -1,9 +1,5 @@
 <?php
 	session_start();
-foreach($_SESSION['cart_arr'] as $value)
-				{
-					echo $value;
-				}
 	require_once('db_config.php'); 
 ?>
 <html>
@@ -19,7 +15,10 @@ foreach($_SESSION['cart_arr'] as $value)
 	    <div class="container">
 		  <div class="row" style="padding: 50px;">
 			<?php
-				
+				foreach($_SESSION['cart_arr'] as $value)
+				{
+					echo $value;
+				}
 			?>
                   </div>
          </div>
