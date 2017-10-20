@@ -34,8 +34,8 @@
 				<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
 					<div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
 						<form action="" method="post">
-							<input type="checkbox" name="catg[]" value="Mobiles" checked> Mobiles<br>
-							<input type="checkbox" name="catg[]" value="Laptops" checked> Laptops<br>
+							<input type="checkbox" name="catg[]" value="Mobiles"> Mobiles<br>
+							<input type="checkbox" name="catg[]" value="Laptops"> Laptops<br>
 							<input type="submit" name="submit" Value="Submit">
 						</form>
 					</div>
