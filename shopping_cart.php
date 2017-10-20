@@ -1,5 +1,9 @@
 <?php
 	session_start();
+foreach($_SESSION['cart_arr'] as $value)
+				{
+					echo $value;
+				}
 	require_once('db_config.php'); 
 ?>
 <html>
@@ -15,27 +19,9 @@
 	    <div class="container">
 		  <div class="row" style="padding: 50px;">
 			<?php
-				foreach($_SESSION['cart_arr'] as $value)
-				{
-					echo $value;
-				}
+				
 			?>
                   </div>
          </div>
     </body>
 </html> 
-
-<?php
-	if(isset($_POST['delete_now']))
-	{
-		unset($_SESSION['pro_id']);
-		unset($prod_id);
-		?>
-			<script>
-				alert("Product Deleted");
-				window.location.href=window.location.href;
-			</script>
-		<?php
-		
-	}
-?>
