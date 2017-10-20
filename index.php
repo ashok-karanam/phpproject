@@ -3,9 +3,9 @@
 	require_once('db_config.php');
 	if(isset($_POST['submit']))
 	{
-		if(!empty($_POST['check_list'])) 
+		if(!empty($_POST['catg'])) 
 		{
-			foreach($_POST['check_list'] as $selected) 
+			foreach($_POST['catg'] as $selected) 
 			{
 				echo $selected;
 			}
