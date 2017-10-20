@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once('db_config.php'); 
 	$sql = "SELECT * FROM tbl_prod";
 ?>
@@ -48,3 +49,15 @@
 	</body>
 	<!--create table tbl_prod (pro_id int primary key,cat_id int,pro_name varchar(255),storage varchar(20),memory varchar(20),price varchar(10),screen_resolution varchar(30),foreign key(cat_id) references tbl_catg(cat_id));-->
 </html>
+
+<?php
+	if(isset($_POST['buy_now']))
+	{
+		if(!isset($_SESSION['cart_arr']))
+		{
+			$_SESSION['cart_arr']=[];
+		}
+		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
+		array_push($_SESSION['cart_arr'],$pro_id);
+	}
+?>
