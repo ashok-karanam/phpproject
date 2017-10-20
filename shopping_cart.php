@@ -1,6 +1,10 @@
 <?php
 	session_start();
 	$prod_id=$_SESSION['cart_arr'];
+foreach ($_SESSION['$cart_arr'] as $value) 
+	{
+		echo $value;
+	}
 	require_once('db_config.php'); 
 ?>
 
