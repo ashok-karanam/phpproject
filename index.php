@@ -1,6 +1,16 @@
 <?php
 	session_start();
 	require_once('db_config.php');
+	if(isset($_POST['submit']))
+	{
+		if(!empty($_POST['check_list'])) 
+		{
+			foreach($_POST['check_list'] as $selected) 
+			{
+				echo "<p>".$selected ."</p>";
+			}
+		}
+	}
 	if(isset($_POST['filter']))
 	{
 		$prod_id=(isset($_POST['val']) ? $_POST['val'] : '');
@@ -26,8 +36,11 @@
 			<div class="row">
 				<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
 					<div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
-						<input type="checkbox" name="catg" value="Mobiles" checked> Mobiles<br>
-  						<input type="checkbox" name="catg" value="Laptops" checked> Laptops<br>
+						<form action="" method="post">
+							<input type="checkbox" name="catg[]" value="Mobiles" checked> Mobiles<br>
+							<input type="checkbox" name="catg[]" value="Laptops" checked> Laptops<br>
+							<input type="submit" name="submit" Value="Submit">
+						</form
 					</div>
 					<div class="col-md-10 col-lg-10 col-xs-12 col-sm-12">
 						<?php
