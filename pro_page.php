@@ -33,7 +33,7 @@
 								</ul>
 								<form action="" method="post">
 									<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
-									<input type="submit" value="Buy Now" name="buy_now">
+									<input type="submit" value="Add to Cart" name="buy_now" class="btn btn-primary">
 								</form>
 							<div>
 						<?php
