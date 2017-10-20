@@ -1,7 +1,15 @@
 <?php
 	session_start();
-	require_once('db_config.php'); 
-	$sql = "SELECT * FROM tbl_prod";
+	require_once('db_config.php');
+	if(isset($_POST['filter']))
+	{
+		$append="where catg = 'Mobiles'";
+	}
+	else
+	{
+		$append="where 1==1";
+	}
+	$sql = "SELECT * FROM tbl_prod $append";
 ?>
 
 <html>
