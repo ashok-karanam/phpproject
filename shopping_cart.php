@@ -53,7 +53,7 @@
 	if(isset($_POST['delete_now']))
 	{
 		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
-		$key = array_search ($pro_id, $_SESSION['cart']);
+		$key = array_search ($pro_id, $_SESSION['cart_arr']);
 		unset($_SESSION['cart_arr'][$key]);
 		?>
 			<script>
