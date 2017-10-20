@@ -1,6 +1,14 @@
 <?php
 	session_start();
-	foreach ($_SESSION['cart_arr'] as $value) 
+if(empty($_SESSION['cart_arr']))
+{
+	echo "empty";
+}
+else
+{
+	echo "t";
+}
+	foreach ( as $value) 
 	{
 		echo $value;
 	} 
