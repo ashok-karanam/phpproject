@@ -40,7 +40,7 @@
 							<input type="checkbox" name="catg[]" value="Mobiles" checked> Mobiles<br>
 							<input type="checkbox" name="catg[]" value="Laptops" checked> Laptops<br>
 							<input type="submit" name="submit" Value="Submit">
-						</form
+						</form>
 					</div>
 					<div class="col-md-10 col-lg-10 col-xs-12 col-sm-12">
 						<?php
