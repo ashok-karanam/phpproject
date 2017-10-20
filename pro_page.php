@@ -6,43 +6,44 @@
 ?>
 
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Product Infortmation</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="container">
-		<div class="row" style="padding: 50px;">
-			<?php
-				foreach($conn->query($sql) as $row)
-				{
-					?>
-						<div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
-							<img src="<?php echo $row['img_name']; ?>" class="img-responsive">
-						</div>
-						<div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
-							<ul>
-								<li>Name: <?php echo $row['pro_name']; ?></li>
-								<li>Storage: <?php echo $row['storage']; ?></li>
-								<li>Memory: <?php echo $row['memory']; ?></li>
-								<li>Resolution: <?php echo $row['screen_resolution']; ?></li>
-								<li>Price: <?php echo $row['price']; ?></li>
-							</ul>
-							<form action="" method="post">
-								<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
-								<input type="submit" value="Buy Now" name="buy_now">
-							</form>
-						<div>
-					<?php
-				}
-			?>
+	<head>
+		<meta charset="UTF-8">
+		<title>Product Infortmation</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row" style="padding: 50px;">
+				<?php
+					foreach($conn->query($sql) as $row)
+					{
+						?>
+							<div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+								<img src="<?php echo $row['img_name']; ?>" class="img-responsive">
+							</div>
+							<div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+								<ul>
+									<li>Name: <?php echo $row['pro_name']; ?></li>
+									<li>Storage: <?php echo $row['storage']; ?></li>
+									<li>Memory: <?php echo $row['memory']; ?></li>
+									<li>Resolution: <?php echo $row['screen_resolution']; ?></li>
+									<li>Price: <?php echo $row['price']; ?></li>
+								</ul>
+								<form action="" method="post">
+									<input type="hidden" value="<?php echo $row['pro_id'];?>" name="pro_id">
+									<input type="submit" value="Buy Now" name="buy_now">
+								</form>
+							<div>
+						<?php
+					}
+				?>
+			</div>
 		</div>
-	</div>
-    </body>
+	</body>
 </html>
+		
 <?php
 	if(isset($_POST['buy_now']))
 	{
