@@ -48,3 +48,18 @@
          </div>
     </body>
 </html> 
+
+<?php
+	if(isset($_POST['delete_now']))
+	{
+		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
+		$key = array_search ($pro_id, $_SESSION['cart']);
+		unset($_SESSION['cart_arr'][$key]);
+		?>
+			<script>
+				alert("Product Deleted");
+				window.location.href=window.location.href;
+			</script>
+		<?php
+	}
+?>
