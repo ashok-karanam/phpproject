@@ -49,9 +49,9 @@
 	if(isset($_POST['buy_now']))
 	{
 		$pro_id=(isset($_POST['pro_id']) ? $_POST['pro_id'] : '');
-		array_push($_SESSION['$cart_arr'],$pro_id);
+		array_push($_SESSION['cart_arr'],$pro_id);
 	}
-	foreach ($_SESSION['$cart_arr'] as $value) 
+	foreach ($_SESSION['cart_arr'] as $value) 
 	{
 		echo $value;
 	}
