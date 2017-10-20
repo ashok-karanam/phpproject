@@ -8,7 +8,7 @@
 			$checked_count = count($_POST['catg']);
 			if($checked_count==1)
 			{
-				$val=$_POST['catg'];
+				$val=$_POST['catg'][0];
 				echo $val;
 				$append="where (tbl_catg.cat_name=$val)";
 			}
