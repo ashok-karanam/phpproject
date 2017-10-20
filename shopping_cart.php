@@ -1,10 +1,5 @@
 <?php
 	session_start();
-	$prod_id=$_SESSION['cart_arr'];
-foreach ($_SESSION['$cart_arr'] as $value) 
-	{
-		echo $value;
-	}
 	require_once('db_config.php'); 
 ?>
 
@@ -21,7 +16,7 @@ foreach ($_SESSION['$cart_arr'] as $value)
 	    <div class="container">
 		  <div class="row" style="padding: 50px;">
 			<?php
-				foreach ($prod_id as $value) 
+				foreach ($_SESSION['cart_arr']; as $value) 
 				{
 					$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_catg.cat_id=tbl_prod.cat_id where pro_id=$value";
 					foreach($conn->query($sql) as $row)
