@@ -5,20 +5,17 @@
 	{
 		if(!empty($_POST['catg'])) 
 		{
-			foreach($_POST['catg'] as $selected) 
+			$checked_count = count($_POST['catg']);
+			if($checked_count==1)
 			{
-				echo $selected;
+				$val=$_POST['catg'];
+				$append="where (tbl_catg.cat_name='$val')";
+			}
+			else
+			{
+				$append="where (tbl_catg.cat_name='Laptops' or tbl_catg.cat_name='Mobiles')";
 			}
 		}
-	}
-	if(isset($_POST['filter']))
-	{
-		$prod_id=(isset($_POST['val']) ? $_POST['val'] : '');
-		$append="where (tbl_catg.cat_name=$value)";
-	}
-	else
-	{
-		$append="where (tbl_catg.cat_name='Laptops' or tbl_catg.cat_name='Mobiles')";
 	}
 	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_prod.cat_id=tbl_catg.cat_id $append";
 ?>
