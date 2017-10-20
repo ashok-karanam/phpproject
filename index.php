@@ -9,7 +9,7 @@
 	{
 		$append="where (cat_name='Mobile'";
 	}
-	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_prod.cat_id=tbl_catg.cat_id";
+	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_prod.cat_id=tbl_catg.cat_id where tbl_catg.cat_name='Mobiles'";
 ?>
 
 <html>
