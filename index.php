@@ -3,7 +3,8 @@
 	require_once('db_config.php');
 	if(isset($_POST['filter']))
 	{
-		$append="where catg = 'Mobiles'";
+		$prod_id=(isset($_POST['val']) ? $_POST['val'] : '');
+		$append="where (tbl_catg.cat_name=$value)";
 	}
 	else
 	{
