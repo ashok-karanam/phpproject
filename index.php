@@ -7,9 +7,9 @@
 	}
 	else
 	{
-		$append="where 1==1";
+		$append="where (cat_name='Mobile'";
 	}
-	$sql = "SELECT * FROM tbl_prod where 1==1";
+	$sql = "SELECT * FROM tbl_prod inner join tbl_catg on tbl_prod.cat_id=tbl_catg.cat_id";
 ?>
 
 <html>
